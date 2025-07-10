@@ -56,7 +56,12 @@ namespace ProjectInput
             {
                 MoveInputAction?.Invoke(_inputActions.Player.Move.ReadValue<Vector2>());
                 LookInputAction?.Invoke(_inputActions.Player.Look.ReadValue<Vector2>());
-                MouseScrollAction?.Invoke(_inputActions.Player.MouseScroll.ReadValue<Vector2>());
+
+                Vector2 mouseInput = _inputActions.Player.MouseScroll.ReadValue<Vector2>();
+                if (mouseInput != Vector2.zero)
+                {
+                    MouseScrollAction?.Invoke(mouseInput);
+                }
             }
         }
 

@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &843091858457781884
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8791224311307319261}
+  m_Layer: 3
+  m_Name: ToolHandsTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8791224311307319261
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843091858457781884}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.6532818, y: 0.27059788, z: 0.27059835, w: 0.65328115}
+  m_LocalPosition: {x: -0.357, y: -0.173, z: 0.378}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8629807371761995233}
+  m_LocalEulerAnglesHint: {x: 45, y: 90, z: 90}
 --- !u!1 &1702521120981546733
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,6 +184,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75931f4b83def6744848adf34152fa5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2467080036319715595
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2933953931876438133}
+  - component: {fileID: 3207288896808811488}
+  m_Layer: 3
+  m_Name: InputControllerPickableCarPart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2933953931876438133
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2467080036319715595}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5263341935158918145}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3207288896808811488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2467080036319715595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2211418284289cf43bc7fc6cf7386988, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2971786698330654754
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,6 +261,7 @@ Transform:
   - {fileID: 3133601362692048293}
   - {fileID: 138748013900280851}
   - {fileID: 5263341935158918145}
+  - {fileID: 717874281592213012}
   m_Father: {fileID: 8635916189236063787}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6609625271594234791
@@ -201,13 +277,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _originTransform: {fileID: 8629807371761995233}
-  _rayDistance: 5
+  _rayDistance: 3
   _rayLayserMask:
     serializedVersion: 2
-    m_Bits: 960
+    m_Bits: 1984
   _inputControllerClickable: {fileID: 4284872709522049339}
   _inputControllerDragging: {fileID: 4714294365849008842}
   _inputControllerPickable: {fileID: 2418411970394525965}
+  _inputControllerTool: {fileID: 6194722087706656936}
 --- !u!1 &4138519227618417552
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,6 +318,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1041726726482354587}
+  - {fileID: 8791224311307319261}
   m_Father: {fileID: 3551132052571451739}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &3963720806756267833
@@ -408,7 +486,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2933953931876438133}
   m_Father: {fileID: 6144029160705853243}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2418411970394525965
@@ -427,6 +506,7 @@ MonoBehaviour:
   _handsTransform: {fileID: 1041726726482354587}
   _rotationSpeed: 5
   _trowSpeed: 5
+  _inputControllerPickableCarPart: {fileID: 3207288896808811488}
 --- !u!1 &4898927083862787011
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,3 +583,48 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8629807371761995233}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8090112286068127917
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 717874281592213012}
+  - component: {fileID: 6194722087706656936}
+  m_Layer: 3
+  m_Name: InputControllerTool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &717874281592213012
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8090112286068127917}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6144029160705853243}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6194722087706656936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8090112286068127917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15d00d1038f70cd47aec8638f8c4eca3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _handsTransform: {fileID: 8791224311307319261}

@@ -1,24 +1,27 @@
 using Interfaces;
 using UnityEngine;
 
-public class DraggingItemIntermediary : MonoBehaviour, IDraggingItem
+namespace Items
 {
-    [SerializeField] private MonoBehaviour _mainDraggingItemMonoBehaviour;
-
-    private IDraggingItem _mainDraggingItem;
-
-    private void Start()
+    public class DraggingItemIntermediary : MonoBehaviour, IDraggingItem
     {
-        _mainDraggingItem = _mainDraggingItemMonoBehaviour as IDraggingItem;
-    }
+        [SerializeField] private MonoBehaviour _mainDraggingItemMonoBehaviour;
 
-    public bool TryDrag(Transform targetParrent)
-    {
-        return _mainDraggingItem.TryDrag(targetParrent);
-    }
+        private IDraggingItem _mainDraggingItem;
 
-    public bool TryRelease()
-    {
-        return _mainDraggingItem.TryRelease();
+        private void Start()
+        {
+            _mainDraggingItem = _mainDraggingItemMonoBehaviour as IDraggingItem;
+        }
+
+        public bool TryDrag(Transform targetParrent)
+        {
+            return _mainDraggingItem.TryDrag(targetParrent);
+        }
+
+        public bool TryRelease()
+        {
+            return _mainDraggingItem.TryRelease();
+        }
     }
 }

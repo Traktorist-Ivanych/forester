@@ -1,15 +1,18 @@
 using UnityEngine;
 
-public class CliclableItemTextIntermediary : MonoBehaviour, IClickableObjectText
+namespace Items
 {
-    [SerializeField] private MonoBehaviour _clickableObjectTextMonoBehavior;
-
-    private IClickableObjectText _mainClickableObjectText;
-
-    public string ClickableText => _mainClickableObjectText.ClickableText;
-
-    void Start()
+    public class CliclableItemTextIntermediary : MonoBehaviour, IClickableObjectText
     {
-        _mainClickableObjectText = _clickableObjectTextMonoBehavior as IClickableObjectText;
+        [SerializeField] private MonoBehaviour _clickableObjectTextMonoBehavior;
+
+        private IClickableObjectText _mainClickableObjectText;
+
+        public string ClickableText => _mainClickableObjectText.ClickableText;
+
+        void Start()
+        {
+            _mainClickableObjectText = _clickableObjectTextMonoBehavior as IClickableObjectText;
+        }
     }
 }

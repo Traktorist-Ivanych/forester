@@ -18,6 +18,7 @@ namespace Player
         [SerializeField] private InputControllerClickable _inputControllerClickable;
         [SerializeField] private InputControllerDragging _inputControllerDragging;
         [SerializeField] private InputControllerPickable _inputControllerPickable;
+        [SerializeField] private InputControllerTool _inputControllerTool;
 
         private PlayerInputType _currentInputType;
 
@@ -90,7 +91,19 @@ namespace Player
                 case PlayerInputType.Clickable:
                     if (_hasHit)
                     {
-                        if (_inputControllerPickable.TryPickupObject(_raycastHit))
+                        if (_inputControllerTool.TryTakeLeftMousePickableTool(_raycastHit))
+                        {
+                            InvokeRaycastFinishAction();
+                        }
+                        else if (_inputControllerTool.TryReleaseTool(_raycastHit))
+                        {
+                            return;
+                        }
+                        else if (_inputControllerTool.TryUseToolByLeftMouseClick(_raycastHit))
+                        {
+                            return;
+                        }
+                        else if (_inputControllerPickable.TryPickupObject(_raycastHit))
                         {
                             InvokeRaycastFinishAction();
                             _currentInputType = PlayerInputType.Pickable;
@@ -100,9 +113,9 @@ namespace Player
                             InvokeRaycastFinishAction();
                             _currentInputType = PlayerInputType.Dragging;
                         }
-                        else
+                        else if (_inputControllerClickable.TryUseLeftClickRaycast(_raycastHit))
                         {
-                            _inputControllerClickable.LeftClickRaycast(_raycastHit);
+                            return;
                         }
                     }
                     break;
@@ -133,7 +146,7 @@ namespace Player
                 case PlayerInputType.Clickable:
                     if (_hasHit)
                     {
-                        _inputControllerClickable.RightClickRaycast(_raycastHit);
+                        _inputControllerClickable.TryUseRightClickRaycast(_raycastHit);
                     }
                     break;
 
@@ -153,6 +166,16 @@ namespace Player
         {
             switch (_currentInputType)
             {
+                case PlayerInputType.Clickable:
+                    if (_hasHit)
+                    {
+                        if (_inputControllerTool.TryUseToolByMouseScroll(_raycastHit, input))
+                        {
+                            return;
+                        }
+                    }
+                    break;
+
                 case PlayerInputType.Pickable:
                     _inputControllerPickable.RotatePickableItem(input);
                     break;

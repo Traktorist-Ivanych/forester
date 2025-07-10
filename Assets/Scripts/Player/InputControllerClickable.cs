@@ -6,20 +6,28 @@ namespace Player
 {
     public class InputControllerClickable : MonoBehaviour
     {
-        public void LeftClickRaycast(RaycastHit raycastHit)
+        public bool TryUseLeftClickRaycast(RaycastHit raycastHit)
         {
             if (raycastHit.collider.TryGetComponent(out ILeftMouseClickable leftMouseClickable))
             {
                 leftMouseClickable.OnLeftMouseClicked();
+
+                return true;
             }
+
+            return false;
         }
 
-        public void RightClickRaycast(RaycastHit raycastHit)
+        public bool TryUseRightClickRaycast(RaycastHit raycastHit)
         {
             if (raycastHit.collider.TryGetComponent(out IRightMouseClickable leftMouseClickable))
             {
                 leftMouseClickable.OnRightMouseClicked();
+
+                return true;
             }
+
+            return false;
         }
     }
 }

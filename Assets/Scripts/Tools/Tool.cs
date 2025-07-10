@@ -3,11 +3,21 @@ using UnityEngine;
 
 namespace Tools
 {
-    public abstract class Tool : MonoBehaviour, ILeftMouseClickable
+    public abstract class Tool : MonoBehaviour
     {
-        public virtual void OnLeftMouseClicked()
-        {
+        [SerializeField] private ToolType _toolType;
 
+        public ToolType ToolType => _toolType;
+
+        public virtual Tool GetTool()
+        {
+            return this;
         }
+    }
+
+    public enum ToolType
+    {
+        None,
+        WrenchDefault
     }
 }

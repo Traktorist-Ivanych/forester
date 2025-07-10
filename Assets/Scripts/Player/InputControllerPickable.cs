@@ -1,7 +1,5 @@
 using Interfaces;
-using ProjectInput;
 using UnityEngine;
-using Zenject;
 
 namespace Player
 {
@@ -12,19 +10,22 @@ namespace Player
         [SerializeField] private float _rotationSpeed;
         [SerializeField] private float _trowSpeed;
 
+        [SerializeField] private InputControllerPickableCarPart _inputControllerPickableCarPart;
+
         private IPickableItem _currentPickableItem;
 
         public bool TryPickupObject(RaycastHit raycastHit)
         {
-            if (raycastHit.collider.TryGetComponent(out IPickableItem pickableItem))
-            {
-                if (_currentPickableItem == null)
-                {
-                    pickableItem.Pickup(_handsTransform);
-                    _currentPickableItem = pickableItem.OriginalIPickableItem;
+            if (_currentPickableItem != null) return false;
 
-                    return true;
-                }
+            else if (raycastHit.collider.TryGetComponent(out IPickableItem pickableItem))
+            {
+                _currentPickableItem = pickableItem.OriginalIPickableItem;
+                _currentPickableItem.Pickup(_handsTransform);
+
+                _inputControllerPickableCarPart.TryPickupCarPart(pickableItem);
+
+                return true;
             }
 
             return false;
@@ -34,11 +35,8 @@ namespace Player
         {
             if (_currentPickableItem == null) return false;
 
-            if (_currentPickableItem is IPickableItemCarPart &&
-                (_currentPickableItem as IPickableItemCarPart).CanBeInstalled)
+            if (_inputControllerPickableCarPart.TryInstallCarPart())
             {
-                (_currentPickableItem as IPickableItemCarPart).Install();
-
                 _currentPickableItem = null;
 
                 return true;
@@ -48,6 +46,7 @@ namespace Player
                 if (_currentPickableItem.TryRelease())
                 {
                     _currentPickableItem = null;
+                    _inputControllerPickableCarPart.ReleaseCarPart();
 
                     return true;
                 }
@@ -65,6 +64,7 @@ namespace Player
                 if (_currentPickableItem.TryThrow(force))
                 {
                     _currentPickableItem = null;
+                    _inputControllerPickableCarPart.ReleaseCarPart();
 
                     return true;
                 }
