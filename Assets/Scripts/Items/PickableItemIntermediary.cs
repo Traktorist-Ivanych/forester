@@ -15,6 +15,8 @@ namespace Items
 
         private void OnValidate()
         {
+            if (_mainPickableItemMonoBehaviour != null) return;
+
             _mainPickableItemMonoBehaviour = GetComponentInParent<IPickableItem>() as MonoBehaviour;
 
             while (_mainPickableItemMonoBehaviour is PickableItemIntermediary)

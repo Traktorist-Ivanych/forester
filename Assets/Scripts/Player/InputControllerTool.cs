@@ -15,7 +15,7 @@ public class InputControllerTool : MonoBehaviour
         if (raycastHit.collider.TryGetComponent(out ToolLeftMouseButtonPickable tool))
         {
             _currentTool = tool.GetTool();
-            _currentTool.transform.SetParent(_handsTransform, false);
+            _currentTool.TakeInPlayerHands(_handsTransform);
 
             return true;
         }

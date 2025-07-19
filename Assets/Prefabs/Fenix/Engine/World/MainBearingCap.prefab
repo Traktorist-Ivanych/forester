@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8110176687875032370}
   - component: {fileID: 711109042475449934}
   - component: {fileID: 599073499481999745}
+  - component: {fileID: 6061220463900931046}
   m_Layer: 8
   m_Name: MainBearingCap
   m_TagString: Untagged
@@ -432,4 +433,18 @@ MonoBehaviour:
   _rigidbody: {fileID: 8501419996663725261}
   _colliders:
   - {fileID: 3610527386652157432}
-  _fenixParts: []
+  _carPartType: {fileID: 6061220463900931046}
+--- !u!114 &6061220463900931046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5934193164534669895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f00e6e6198b48e4ba2a2261e27a43b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carSystem: 1
+  _enginePartType: 3

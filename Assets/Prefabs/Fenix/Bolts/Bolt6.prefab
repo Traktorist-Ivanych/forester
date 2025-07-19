@@ -69,10 +69,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4124ce76e454e649b2db13dcfac70bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _boltSize: 6
+  _toolType: 1
   _animatedBoltTransform: {fileID: 1799633027293732970}
   _redBolt: {fileID: 5656029277515381792}
   _greenBolt: {fileID: 5611553815205401722}
+  _boltSize: 6
 --- !u!114 &6466467113083446624
 MonoBehaviour:
   m_ObjectHideFlags: 0

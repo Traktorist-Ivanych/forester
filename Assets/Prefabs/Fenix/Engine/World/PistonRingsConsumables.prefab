@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 1201086738769422027}
   - component: {fileID: 3178704953099475905}
   - component: {fileID: 2220239954695017993}
+  - component: {fileID: 3993761033767036426}
+  - component: {fileID: 3525938245535248234}
   m_Layer: 8
   m_Name: PistonRingsConsumables
   m_TagString: Untagged
@@ -602,6 +604,35 @@ MonoBehaviour:
   _rigidbody: {fileID: 1509901913766820201}
   _colliders:
   - {fileID: 4577747045638079699}
-  _compositeParts: []
+  _carPartType: {fileID: 3993761033767036426}
+  _parentCarPartType: {fileID: 3525938245535248234}
   _elementIndex: 0
   _carPartConsumables: {fileID: 3178704953099475905}
+--- !u!114 &3993761033767036426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923015436750050480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5e3a99732fca54cb6bd23c4649775f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carSystem: 2
+  _consumablesPartType: 2
+--- !u!114 &3525938245535248234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923015436750050480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f00e6e6198b48e4ba2a2261e27a43b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carSystem: 1
+  _enginePartType: 4

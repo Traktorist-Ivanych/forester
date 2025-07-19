@@ -114,7 +114,7 @@ namespace Items
             return false;
         }
 
-        protected void Release()
+        protected virtual void Release()
         {
             transform.parent = _mainParent;
 

@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1098929553314988909}
   - component: {fileID: 2299679253629787671}
   - component: {fileID: 2950547420355853851}
+  - component: {fileID: 4398909459872923315}
   m_Layer: 8
   m_Name: Piston
   m_TagString: Untagged
@@ -1062,13 +1063,27 @@ MonoBehaviour:
   - {fileID: 6603346744436813507}
   - {fileID: 8814232979893368782}
   - {fileID: 8994031468273535211}
-  _fenixParts: []
+  _carPartType: {fileID: 4398909459872923315}
   _pickableCompositeElements:
   - {fileID: 0}
   _compositeElements:
   - {fileID: 1468819045123288952}
   _consumablesElements:
   - {fileID: 7844765700602032206}
+--- !u!114 &4398909459872923315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616022041747424128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f00e6e6198b48e4ba2a2261e27a43b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carSystem: 1
+  _enginePartType: 4
 --- !u!1 &765044477196944276
 GameObject:
   m_ObjectHideFlags: 0

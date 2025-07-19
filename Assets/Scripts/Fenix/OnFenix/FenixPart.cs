@@ -7,6 +7,8 @@ namespace Fenix
 {
     public class FenixPart : MonoBehaviour, IRightMouseClickable
     {
+        [SerializeField] private CarPartType _carPartType;
+
         [SerializeField] private List<FenixPart> _nextParts;
         [SerializeField] private List<FenixPart> _previousParts;
 
@@ -18,6 +20,7 @@ namespace Fenix
         protected IPickableItemCarPart _pickableItemCarPart;
         protected bool _isInstalled;
 
+        public CarPartType CarPartType => _carPartType;
         public bool IsInstalled => _isInstalled;
 
         public bool CanBeInstalled()

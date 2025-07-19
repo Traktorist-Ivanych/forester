@@ -1478,6 +1478,7 @@ GameObject:
   - component: {fileID: 1147876461326441315}
   - component: {fileID: 6474273482445218976}
   - component: {fileID: 6099696845458764648}
+  - component: {fileID: 3410034747088167272}
   m_Layer: 8
   m_Name: Piston (2)
   m_TagString: Untagged
@@ -2493,6 +2494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78a4711557e6ece4ea0929ebe9d203c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _carPartType: {fileID: 3410034747088167272}
   _nextParts: []
   _previousParts:
   - {fileID: 2207887911875978088}
@@ -2505,6 +2507,20 @@ MonoBehaviour:
   - {fileID: 4889670683545297612}
   _compositePartElementsConsumables:
   - {fileID: 4473499441722742837}
+--- !u!114 &3410034747088167272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066904436766900619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f00e6e6198b48e4ba2a2261e27a43b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carSystem: 1
+  _enginePartType: 4
 --- !u!1 &1164251672645811062
 GameObject:
   m_ObjectHideFlags: 0
@@ -3503,6 +3519,7 @@ GameObject:
   - component: {fileID: 1119763547804599222}
   - component: {fileID: 1748579570032775536}
   - component: {fileID: 3247701768874649322}
+  - component: {fileID: 3236890391538862483}
   m_Layer: 8
   m_Name: Piston (3)
   m_TagString: Untagged
@@ -4518,6 +4535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78a4711557e6ece4ea0929ebe9d203c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _carPartType: {fileID: 3236890391538862483}
   _nextParts: []
   _previousParts:
   - {fileID: 2207887911875978088}
@@ -4530,6 +4548,20 @@ MonoBehaviour:
   - {fileID: 8737821386939116071}
   _compositePartElementsConsumables:
   - {fileID: 3554162021025552104}
+--- !u!114 &3236890391538862483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497053905951147473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f00e6e6198b48e4ba2a2261e27a43b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carSystem: 1
+  _enginePartType: 4
 --- !u!1 &1509785740588641445
 GameObject:
   m_ObjectHideFlags: 0
@@ -5154,7 +5186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 849088a59f25fbb4a99e3b70d9a7672d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mainPickableItemMonoBehaviour: {fileID: 0}
+  _mainPickableItemMonoBehaviour: {fileID: 163541870855202599}
 --- !u!114 &8865272795963282072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7174,8 +7206,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7319889669846637368}
-  - component: {fileID: 6890335619172921926}
-  - component: {fileID: 8833854209860958377}
+  - component: {fileID: 8171393245030156415}
+  - component: {fileID: 6070723208117578967}
+  - component: {fileID: 3872506354589169736}
+  - component: {fileID: 3391270354535576924}
+  - component: {fileID: 6352793265579982469}
+  - component: {fileID: 6903855214041954599}
+  - component: {fileID: 22660840289238256}
   m_Layer: 8
   m_Name: OilFilter
   m_TagString: Untagged
@@ -7191,66 +7228,365 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3181719951441032035}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.38268346, w: 0.9238795}
+  m_LocalRotation: {x: 0, y: 0, z: -0.38268343, w: 0.92387956}
   m_LocalPosition: {x: -0.21587944, y: -0.07805836, z: 0.14938164}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 3319189041293575655}
   m_Father: {fileID: 5697711170172363590}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &6890335619172921926
-MeshFilter:
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45}
+--- !u!65 &8171393245030156415
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3181719951441032035}
-  m_Mesh: {fileID: 8650127009266895142, guid: ecfb69dba61cb1b45a89bc07b554102b, type: 3}
---- !u!23 &8833854209860958377
-MeshRenderer:
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.05621416, y: 0.08626876, z: 0.05621407}
+  m_Center: {x: -0.000000014450308, y: -0.01696432, z: -0.000000029802322}
+--- !u!114 &6070723208117578967
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3181719951441032035}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 9a70f47904168c34b8ed0fb21c1567c4, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27a62f52278011b45ad5698d4e3d6fee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _carPartType: {fileID: 22660840289238256}
+  _nextParts: []
+  _previousParts: []
+  _fenixPartObject: {fileID: 3181719951441032035}
+  _bolts:
+  - {fileID: 3391270354535576924}
+  _redPart: {fileID: 8305031174143078255}
+  _carPartConsumables: {fileID: 3872506354589169736}
+--- !u!114 &3872506354589169736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3181719951441032035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aab69a566dfbbd647bba69b410a28342, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _healthPoints: 100
+  _meshRenderer: {fileID: 7343725978493896185}
+  _cleanMaterial: {fileID: 2100000, guid: 9a70f47904168c34b8ed0fb21c1567c4, type: 2}
+  _brokenMaterial: {fileID: 2100000, guid: 7d60fa5eaebb03e4db71c54020814dc1, type: 2}
+  _brokenHealthPointsBorder: 10
+--- !u!114 &3391270354535576924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3181719951441032035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de543768320c2594fa81e8a4b725616a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _toolType: 2
+  _animatedBoltTransform: {fileID: 3319189041293575655}
+  _redBolt: {fileID: 8305031174143078255}
+  _greenBolt: {fileID: 6438492747766405099}
+--- !u!114 &6352793265579982469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3181719951441032035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a401f60d5d24ea4f9e9094d81d4c324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _outlineMeshFilters:
+  - {fileID: 1581823562871986348}
+  _bakeKeys:
+  - {fileID: 8650127009266895142, guid: ecfb69dba61cb1b45a89bc07b554102b, type: 3}
+  _bakeValues:
+  - data:
+    - {x: -0.8660363, y: 0.447215, z: -0.22356173}
+    - {x: -0.8660364, y: 0.44721484, z: -0.2235617}
+    - {x: -0.56490827, y: 0.7071079, z: -0.42529643}
+    - {x: -0.56490827, y: 0.707108, z: -0.4252963}
+    - {x: -0.35915297, y: 0.7071078, z: -0.609104}
+    - {x: -0.3591529, y: 0.70710796, z: -0.6091039}
+    - {x: -0.098719984, y: 0.7071075, z: -0.70018095}
+    - {x: -0.09871998, y: 0.70710754, z: -0.70018095}
+    - {x: 0.17674212, y: 0.70710707, z: -0.6846618}
+    - {x: 0.17674217, y: 0.70710707, z: -0.6846618}
+    - {x: 0.42529726, y: 0.70710665, z: -0.5649091}
+    - {x: 0.42529717, y: 0.7071068, z: -0.5649091}
+    - {x: 0.609105, y: 0.7071063, z: -0.35915434}
+    - {x: 0.6091048, y: 0.7071065, z: -0.3591543}
+    - {x: 0.700182, y: 0.7071062, z: -0.098721504}
+    - {x: 0.70018196, y: 0.7071063, z: -0.09872148}
+    - {x: 0.6846629, y: 0.70710635, z: 0.17674114}
+    - {x: 0.6846628, y: 0.7071064, z: 0.17674105}
+    - {x: 0.5649104, y: 0.7071061, z: 0.4252964}
+    - {x: 0.5649104, y: 0.70710623, z: 0.4252963}
+    - {x: 0.35915557, y: 0.7071065, z: 0.60910404}
+    - {x: 0.35915554, y: 0.7071066, z: 0.609104}
+    - {x: 0.0987225, y: 0.70710677, z: 0.7001813}
+    - {x: 0.09872252, y: 0.70710695, z: 0.70018107}
+    - {x: -0.17674004, y: 0.7071073, z: 0.6846621}
+    - {x: -0.1767399, y: 0.7071075, z: 0.6846619}
+    - {x: -0.42529497, y: 0.7071078, z: 0.56490964}
+    - {x: -0.42529482, y: 0.7071079, z: 0.5649095}
+    - {x: -0.6091029, y: 0.70710796, z: 0.35915455}
+    - {x: -0.60910285, y: 0.707108, z: 0.35915452}
+    - {x: -0.7001802, y: 0.707108, z: 0.09872136}
+    - {x: -0.7001799, y: 0.7071084, z: 0.098721415}
+    - {x: -0.8660364, y: 0.44721484, z: -0.2235617}
+    - {x: -0.8660363, y: 0.447215, z: -0.22356173}
+    - {x: -0.70018005, y: 0.7071082, z: 0.09872156}
+    - {x: -0.86603636, y: 0.44721487, z: -0.22356172}
+    - {x: -0.8660363, y: 0.44721502, z: -0.2235617}
+    - {x: -0.7001803, y: 0.70710784, z: 0.0987216}
+    - {x: -0.6091028, y: 0.707108, z: 0.3591546}
+    - {x: -0.6091031, y: 0.70710766, z: 0.35915485}
+    - {x: -0.42529523, y: 0.7071074, z: 0.56490976}
+    - {x: -0.42529523, y: 0.70710725, z: 0.56491}
+    - {x: -0.17674004, y: 0.70710707, z: 0.6846623}
+    - {x: -0.17673995, y: 0.7071068, z: 0.6846626}
+    - {x: 0.09872254, y: 0.70710677, z: 0.70018137}
+    - {x: 0.098722555, y: 0.7071065, z: 0.70018166}
+    - {x: 0.35915554, y: 0.7071063, z: 0.6091042}
+    - {x: 0.35915568, y: 0.70710593, z: 0.6091046}
+    - {x: 0.5649105, y: 0.7071061, z: 0.42529652}
+    - {x: 0.56491077, y: 0.70710576, z: 0.42529672}
+    - {x: 0.684663, y: 0.7071061, z: 0.17674121}
+    - {x: 0.68466353, y: 0.7071057, z: 0.17674118}
+    - {x: 0.70018226, y: 0.707106, z: -0.09872126}
+    - {x: 0.7001826, y: 0.7071057, z: -0.098721296}
+    - {x: 0.6091053, y: 0.707106, z: -0.3591544}
+    - {x: 0.6091054, y: 0.70710576, z: -0.35915452}
+    - {x: 0.4252972, y: 0.7071064, z: -0.5649095}
+    - {x: 0.42529747, y: 0.7071061, z: -0.5649097}
+    - {x: 0.17674205, y: 0.70710695, z: -0.684662}
+    - {x: 0.17674227, y: 0.7071066, z: -0.6846623}
+    - {x: -0.098720066, y: 0.70710737, z: -0.7001811}
+    - {x: -0.09872016, y: 0.707107, z: -0.70018137}
+    - {x: -0.35915315, y: 0.7071077, z: -0.6091041}
+    - {x: -0.35915327, y: 0.7071075, z: -0.6091043}
+    - {x: -0.5649084, y: 0.70710796, z: -0.42529625}
+    - {x: -0.56490856, y: 0.70710766, z: -0.4252964}
+    - {x: -0.8660363, y: 0.44721502, z: -0.2235617}
+    - {x: -0.86603636, y: 0.44721487, z: -0.22356172}
+    - {x: -0.17673995, y: 0.7071068, z: 0.6846626}
+    - {x: 0.098722555, y: 0.7071065, z: 0.70018166}
+    - {x: 0.35915568, y: 0.70710593, z: 0.6091046}
+    - {x: -0.42529523, y: 0.70710725, z: 0.56491}
+    - {x: 0.56491077, y: 0.70710576, z: 0.42529672}
+    - {x: -0.6091031, y: 0.70710766, z: 0.35915485}
+    - {x: 0.68466353, y: 0.7071057, z: 0.17674118}
+    - {x: -0.7001803, y: 0.70710784, z: 0.0987216}
+    - {x: 0.7001826, y: 0.7071057, z: -0.098721296}
+    - {x: -0.86603636, y: 0.44721487, z: -0.22356172}
+    - {x: 0.6091054, y: 0.70710576, z: -0.35915452}
+    - {x: -0.56490856, y: 0.70710766, z: -0.4252964}
+    - {x: 0.42529747, y: 0.7071061, z: -0.5649097}
+    - {x: -0.35915327, y: 0.7071075, z: -0.6091043}
+    - {x: 0.17674227, y: 0.7071066, z: -0.6846623}
+    - {x: -0.09872016, y: 0.707107, z: -0.70018137}
+    - {x: 0.5649109, y: 0.7071055, z: 0.42529687}
+    - {x: 0.9498928, y: -0.1938459, z: 0.2452087}
+    - {x: 0.8660378, y: 0.44721207, z: 0.2235619}
+    - {x: 0.7837492, y: -0.19384582, z: 0.59005165}
+    - {x: 0.35915554, y: 0.7071059, z: 0.60910475}
+    - {x: 0.49828658, y: -0.19384564, z: 0.84506476}
+    - {x: 0.098722205, y: 0.70710623, z: 0.7001819}
+    - {x: 0.13696435, y: -0.1938452, z: 0.9714241}
+    - {x: -0.1767404, y: 0.70710653, z: 0.68466276}
+    - {x: -0.2452091, y: -0.19384465, z: 0.94989306}
+    - {x: -0.42529568, y: 0.7071069, z: 0.5649102}
+    - {x: -0.5900518, y: -0.19384414, z: 0.7837496}
+    - {x: -0.6091036, y: 0.70710725, z: 0.35915485}
+    - {x: -0.8450648, y: -0.19384377, z: 0.4982871}
+    - {x: -0.7001808, y: 0.70710737, z: 0.09872152}
+    - {x: -0.97142434, y: -0.19384368, z: 0.13696492}
+    - {x: -0.68466187, y: 0.70710725, z: -0.17674102}
+    - {x: -0.9498933, y: -0.19384381, z: -0.24520868}
+    - {x: -0.5649089, y: 0.70710725, z: -0.4252967}
+    - {x: -0.7837496, y: -0.19384395, z: -0.59005183}
+    - {x: -0.3591537, y: 0.70710695, z: -0.6091046}
+    - {x: -0.49828732, y: -0.19384417, z: -0.8450646}
+    - {x: -0.098720446, y: 0.7071066, z: -0.70018184}
+    - {x: -0.13696532, y: -0.19384445, z: -0.97142416}
+    - {x: 0.1767422, y: 0.70710623, z: -0.6846627}
+    - {x: 0.2452084, y: -0.19384484, z: -0.9498932}
+    - {x: 0.4252974, y: 0.7071059, z: -0.56491005}
+    - {x: 0.59005105, y: -0.19384544, z: -0.78374976}
+    - {x: 0.6091055, y: 0.7071055, z: -0.35915497}
+    - {x: 0.8450641, y: -0.1938458, z: -0.49828756}
+    - {x: 0.7001831, y: 0.7071051, z: -0.09872149}
+    - {x: 0.9714238, y: -0.19384582, z: -0.13696522}
+    - {x: 0.8660378, y: 0.44721207, z: 0.2235619}
+    - {x: 0.9498928, y: -0.1938459, z: 0.2452087}
+    - {x: 0.13696435, y: -0.1938452, z: 0.9714241}
+    - {x: 0.101201296, y: -0.6888779, z: 0.71777815}
+    - {x: 0.36817986, y: -0.6888782, z: 0.6244121}
+    - {x: 0.49828658, y: -0.19384564, z: 0.84506476}
+    - {x: -0.2452091, y: -0.19384465, z: 0.94989306}
+    - {x: 0.579106, y: -0.6888784, z: 0.4359849}
+    - {x: 0.7837492, y: -0.19384582, z: 0.59005165}
+    - {x: -0.18118408, y: -0.6888772, z: 0.7018692}
+    - {x: -0.5900518, y: -0.19384414, z: 0.7837496}
+    - {x: 0.7018685, y: -0.6888783, z: 0.18118303}
+    - {x: 0.9498928, y: -0.1938459, z: 0.2452087}
+    - {x: -0.43598565, y: -0.6888769, z: 0.57910717}
+    - {x: -0.8450648, y: -0.19384377, z: 0.4982871}
+    - {x: 0.71777767, y: -0.6888783, z: -0.10120261}
+    - {x: 0.9714238, y: -0.19384582, z: -0.13696522}
+    - {x: -0.62441295, y: -0.6888768, z: 0.36818087}
+    - {x: -0.97142434, y: -0.19384368, z: 0.13696492}
+    - {x: 0.6244112, y: -0.6888783, z: -0.36818102}
+    - {x: 0.8450641, y: -0.1938458, z: -0.49828756}
+    - {x: -0.7177793, y: -0.68887657, z: 0.10120235}
+    - {x: -0.9498933, y: -0.19384381, z: -0.24520868}
+    - {x: 0.43598372, y: -0.6888782, z: -0.57910705}
+    - {x: 0.59005105, y: -0.19384544, z: -0.78374976}
+    - {x: -0.7018701, y: -0.6888767, z: -0.18118303}
+    - {x: -0.7837496, y: -0.19384395, z: -0.59005183}
+    - {x: 0.18118188, y: -0.68887764, z: -0.70186955}
+    - {x: 0.2452084, y: -0.19384484, z: -0.9498932}
+    - {x: -0.57910776, y: -0.6888768, z: -0.43598518}
+    - {x: -0.49828732, y: -0.19384417, z: -0.8450646}
+    - {x: -0.10120353, y: -0.6888772, z: -0.7177785}
+    - {x: -0.13696532, y: -0.19384445, z: -0.97142416}
+    - {x: -0.3681817, y: -0.68887705, z: -0.62441236}
+    - {x: 0.12907735, y: -0.9767001, z: -0.1714519}
+    - {x: 0.05364003, y: -0.9767, z: -0.2077973}
+    - {x: -0.029963633, y: -0.97669995, z: -0.21250759}
+    - {x: -0.10900602, y: -0.9766998, z: -0.18486542}
+    - {x: -0.17145358, y: -0.9766997, z: -0.12907903}
+    - {x: 0.18486378, y: -0.97670025, z: -0.109004594}
+    - {x: -0.20779891, y: -0.9766997, z: -0.05364164}
+    - {x: 0.2125062, y: -0.97670025, z: -0.029962374}
+    - {x: -0.21250892, y: -0.9766997, z: 0.029962195}
+    - {x: 0.20779599, y: -0.97670025, z: 0.053641498}
+    - {x: -0.18486647, y: -0.9766997, z: 0.10900471}
+    - {x: 0.17145045, y: -0.97670025, z: 0.1290789}
+    - {x: -0.12908025, y: -0.9766998, z: 0.1714521}
+    - {x: 0.10900327, y: -0.9767001, z: 0.18486504}
+    - {x: -0.05364309, y: -0.97669995, z: 0.20779738}
+    - {x: 0.029960979, y: -0.9767, z: 0.21250731}
+    - {x: 0.17674212, y: 0.70710707, z: -0.6846618}
+    - {x: 0.17674205, y: 0.70710695, z: -0.684662}
+    - {x: 0.4252972, y: 0.7071064, z: -0.5649095}
+    - {x: 0.42529726, y: 0.70710665, z: -0.5649091}
+    - {x: -0.098719984, y: 0.7071075, z: -0.70018095}
+    - {x: 0.6091053, y: 0.707106, z: -0.3591544}
+    - {x: -0.098720066, y: 0.70710737, z: -0.7001811}
+    - {x: 0.609105, y: 0.7071063, z: -0.35915434}
+    - {x: -0.35915297, y: 0.7071078, z: -0.609104}
+    - {x: 0.70018226, y: 0.707106, z: -0.09872126}
+    - {x: -0.35915315, y: 0.7071077, z: -0.6091041}
+    - {x: 0.700182, y: 0.7071062, z: -0.098721504}
+    - {x: -0.56490827, y: 0.7071079, z: -0.42529643}
+    - {x: 0.684663, y: 0.7071061, z: 0.17674121}
+    - {x: -0.5649084, y: 0.70710796, z: -0.42529625}
+    - {x: 0.6846629, y: 0.70710635, z: 0.17674114}
+    - {x: -0.8660364, y: 0.44721484, z: -0.2235617}
+    - {x: 0.5649105, y: 0.7071061, z: 0.42529652}
+    - {x: -0.8660363, y: 0.44721502, z: -0.2235617}
+    - {x: 0.5649104, y: 0.7071061, z: 0.4252964}
+    - {x: -0.7001802, y: 0.707108, z: 0.09872136}
+    - {x: 0.35915554, y: 0.7071063, z: 0.6091042}
+    - {x: -0.70018005, y: 0.7071082, z: 0.09872156}
+    - {x: 0.35915557, y: 0.7071065, z: 0.60910404}
+    - {x: -0.6091029, y: 0.70710796, z: 0.35915455}
+    - {x: 0.09872254, y: 0.70710677, z: 0.70018137}
+    - {x: -0.6091028, y: 0.707108, z: 0.3591546}
+    - {x: 0.0987225, y: 0.70710677, z: 0.7001813}
+    - {x: -0.42529497, y: 0.7071078, z: 0.56490964}
+    - {x: -0.17674004, y: 0.70710707, z: 0.6846623}
+    - {x: -0.42529523, y: 0.7071074, z: 0.56490976}
+    - {x: -0.17674004, y: 0.7071073, z: 0.6846621}
+    - {x: -0.09871998, y: 0.70710754, z: -0.70018095}
+    - {x: 0.098722205, y: 0.70710623, z: 0.7001819}
+    - {x: 0.35915554, y: 0.7071059, z: 0.60910475}
+    - {x: -0.3591529, y: 0.70710796, z: -0.6091039}
+    - {x: 0.17674217, y: 0.70710707, z: -0.6846618}
+    - {x: 0.5649109, y: 0.7071055, z: 0.42529687}
+    - {x: -0.1767404, y: 0.70710653, z: 0.68466276}
+    - {x: -0.56490827, y: 0.707108, z: -0.4252963}
+    - {x: 0.42529717, y: 0.7071068, z: -0.5649091}
+    - {x: 0.8660378, y: 0.44721207, z: 0.2235619}
+    - {x: -0.42529568, y: 0.7071069, z: 0.5649102}
+    - {x: -0.8660363, y: 0.447215, z: -0.22356173}
+    - {x: 0.6091048, y: 0.7071065, z: -0.3591543}
+    - {x: 0.7001831, y: 0.7071051, z: -0.09872149}
+    - {x: -0.6091036, y: 0.70710725, z: 0.35915485}
+    - {x: -0.7001799, y: 0.7071084, z: 0.098721415}
+    - {x: 0.70018196, y: 0.7071063, z: -0.09872148}
+    - {x: 0.6091055, y: 0.7071055, z: -0.35915497}
+    - {x: -0.7001808, y: 0.70710737, z: 0.09872152}
+    - {x: -0.60910285, y: 0.707108, z: 0.35915452}
+    - {x: 0.6846628, y: 0.7071064, z: 0.17674105}
+    - {x: 0.4252974, y: 0.7071059, z: -0.56491005}
+    - {x: -0.68466187, y: 0.70710725, z: -0.17674102}
+    - {x: -0.42529482, y: 0.7071079, z: 0.5649095}
+    - {x: 0.5649104, y: 0.70710623, z: 0.4252963}
+    - {x: 0.1767422, y: 0.70710623, z: -0.6846627}
+    - {x: -0.5649089, y: 0.70710725, z: -0.4252967}
+    - {x: -0.1767399, y: 0.7071075, z: 0.6846619}
+    - {x: 0.35915554, y: 0.7071066, z: 0.609104}
+    - {x: -0.098720446, y: 0.7071066, z: -0.70018184}
+    - {x: -0.3591537, y: 0.70710695, z: -0.6091046}
+    - {x: 0.09872252, y: 0.70710695, z: 0.70018107}
+  _outlineRenderers:
+  - {fileID: 7343725978493896185}
+--- !u!114 &6903855214041954599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3181719951441032035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c14906cd87dda5f42a6f7839bf6382f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clickableText: Oil Filter
+--- !u!114 &22660840289238256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3181719951441032035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5e3a99732fca54cb6bd23c4649775f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carSystem: 2
+  _consumablesPartType: 1
 --- !u!1 &3230136188551732699
 GameObject:
   m_ObjectHideFlags: 0
@@ -8626,7 +8962,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 849088a59f25fbb4a99e3b70d9a7672d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mainPickableItemMonoBehaviour: {fileID: 0}
+  _mainPickableItemMonoBehaviour: {fileID: 163541870855202599}
 --- !u!114 &249641328699835211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8777,6 +9113,7 @@ GameObject:
   - component: {fileID: 4073959861003734554}
   - component: {fileID: 4324359596780453921}
   - component: {fileID: 1534201120594076079}
+  - component: {fileID: 2724369409846999043}
   m_Layer: 8
   m_Name: OilPan
   m_TagString: Untagged
@@ -9309,6 +9646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc547b57669f28a4d85d0490b7209eba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _carPartType: {fileID: 2724369409846999043}
   _nextParts: []
   _previousParts:
   - {fileID: 2207887911875978088}
@@ -9321,6 +9659,20 @@ MonoBehaviour:
   - {fileID: 2314391726619282448}
   - {fileID: 2234836894587703013}
   _redPart: {fileID: 2975680659624092170}
+--- !u!114 &2724369409846999043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4552529024546628886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f00e6e6198b48e4ba2a2261e27a43b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carSystem: 1
+  _enginePartType: 6
 --- !u!1 &4554896633667880551
 GameObject:
   m_ObjectHideFlags: 0
@@ -9896,6 +10248,7 @@ GameObject:
   - component: {fileID: 841398301174144356}
   - component: {fileID: 3308838348638028566}
   - component: {fileID: 1427377174095335426}
+  - component: {fileID: 7334700388207877289}
   m_Layer: 8
   m_Name: MainBearingCap (1)
   m_TagString: Untagged
@@ -10007,6 +10360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc547b57669f28a4d85d0490b7209eba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _carPartType: {fileID: 7334700388207877289}
   _nextParts: []
   _previousParts:
   - {fileID: 2207887911875978088}
@@ -10292,6 +10646,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _clickableText: Main Bearing Cap
+--- !u!114 &7334700388207877289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5196379818077455209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f00e6e6198b48e4ba2a2261e27a43b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carSystem: 1
+  _enginePartType: 3
 --- !u!1 &5272169599706501363
 GameObject:
   m_ObjectHideFlags: 0
@@ -10607,6 +10975,7 @@ GameObject:
   - component: {fileID: 74105635295427920}
   - component: {fileID: 8206122364380050745}
   - component: {fileID: 7280837419226531955}
+  - component: {fileID: 7030080697711136918}
   m_Layer: 8
   m_Name: Piston (5)
   m_TagString: Untagged
@@ -11622,6 +11991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78a4711557e6ece4ea0929ebe9d203c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _carPartType: {fileID: 7030080697711136918}
   _nextParts: []
   _previousParts:
   - {fileID: 2207887911875978088}
@@ -11634,6 +12004,20 @@ MonoBehaviour:
   - {fileID: 8855993781981075298}
   _compositePartElementsConsumables:
   - {fileID: 1910951894682704667}
+--- !u!114 &7030080697711136918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5501761103497411914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f00e6e6198b48e4ba2a2261e27a43b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carSystem: 1
+  _enginePartType: 4
 --- !u!1 &5565558296568005592
 GameObject:
   m_ObjectHideFlags: 0
@@ -11650,6 +12034,7 @@ GameObject:
   - component: {fileID: 2535042770511811552}
   - component: {fileID: 7369062780544067279}
   - component: {fileID: 4170733775744015278}
+  - component: {fileID: 6638138464009954706}
   m_Layer: 8
   m_Name: Piston (1)
   m_TagString: Untagged
@@ -12665,6 +13050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78a4711557e6ece4ea0929ebe9d203c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _carPartType: {fileID: 6638138464009954706}
   _nextParts: []
   _previousParts:
   - {fileID: 2207887911875978088}
@@ -12677,6 +13063,20 @@ MonoBehaviour:
   - {fileID: 6375555508053123346}
   _compositePartElementsConsumables:
   - {fileID: 5255388496583123125}
+--- !u!114 &6638138464009954706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5565558296568005592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f00e6e6198b48e4ba2a2261e27a43b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carSystem: 1
+  _enginePartType: 4
 --- !u!1 &5568040064034680982
 GameObject:
   m_ObjectHideFlags: 0
@@ -13248,6 +13648,7 @@ GameObject:
   - component: {fileID: 206948180559129625}
   - component: {fileID: 8178837834098637914}
   - component: {fileID: 8586521887903925274}
+  - component: {fileID: 3320275525659342156}
   m_Layer: 8
   m_Name: Piston (6)
   m_TagString: Untagged
@@ -14263,6 +14664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78a4711557e6ece4ea0929ebe9d203c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _carPartType: {fileID: 3320275525659342156}
   _nextParts: []
   _previousParts:
   - {fileID: 2207887911875978088}
@@ -14275,6 +14677,20 @@ MonoBehaviour:
   - {fileID: 7907544647488524519}
   _compositePartElementsConsumables:
   - {fileID: 5596749977152837662}
+--- !u!114 &3320275525659342156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5831260680083304620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f00e6e6198b48e4ba2a2261e27a43b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carSystem: 1
+  _enginePartType: 4
 --- !u!1 &5995923171230536229
 GameObject:
   m_ObjectHideFlags: 0
@@ -14829,6 +15245,92 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &6438492747766405099
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3532591359465064310}
+  - component: {fileID: 8371195013813211170}
+  - component: {fileID: 3753303301251921076}
+  m_Layer: 8
+  m_Name: OilFilterGreen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &3532591359465064310
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6438492747766405099}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3319189041293575655}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &8371195013813211170
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6438492747766405099}
+  m_Mesh: {fileID: 8650127009266895142, guid: ecfb69dba61cb1b45a89bc07b554102b, type: 3}
+--- !u!23 &3753303301251921076
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6438492747766405099}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 29aabc1648fb0874891f6d705e42bff1, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &6448211768467889265
 GameObject:
   m_ObjectHideFlags: 0
@@ -14930,6 +15432,7 @@ GameObject:
   - component: {fileID: 4460253754418599094}
   - component: {fileID: 3043629329393657732}
   - component: {fileID: 4871364424995090499}
+  - component: {fileID: 6670164516154401867}
   m_Layer: 8
   m_Name: MainBearingCap (2)
   m_TagString: Untagged
@@ -15020,6 +15523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc547b57669f28a4d85d0490b7209eba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _carPartType: {fileID: 6670164516154401867}
   _nextParts: []
   _previousParts:
   - {fileID: 2207887911875978088}
@@ -15326,6 +15830,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _clickableText: Main Bearing Cap
+--- !u!114 &6670164516154401867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6467138230126121446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f00e6e6198b48e4ba2a2261e27a43b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carSystem: 1
+  _enginePartType: 3
 --- !u!1 &6544283893842513514
 GameObject:
   m_ObjectHideFlags: 0
@@ -15544,6 +16062,7 @@ GameObject:
   - component: {fileID: 4490819272852713352}
   - component: {fileID: 4740323876122745005}
   - component: {fileID: 2207887911875978088}
+  - component: {fileID: 6850527219777150226}
   - component: {fileID: 3054705981436335926}
   - component: {fileID: 6131222989626685306}
   - component: {fileID: 500712333457832825}
@@ -15646,6 +16165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc547b57669f28a4d85d0490b7209eba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _carPartType: {fileID: 6850527219777150226}
   _nextParts:
   - {fileID: 841398301174144356}
   - {fileID: 6511657507597545291}
@@ -15660,6 +16180,20 @@ MonoBehaviour:
   _fenixPartObject: {fileID: 6635806182802703810}
   _bolts: []
   _redPart: {fileID: 3018089619582060328}
+--- !u!114 &6850527219777150226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6635806182802703810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f00e6e6198b48e4ba2a2261e27a43b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carSystem: 1
+  _enginePartType: 2
 --- !u!114 &3054705981436335926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17058,6 +17592,7 @@ GameObject:
   - component: {fileID: 3001074816080721264}
   - component: {fileID: 1646641404980385043}
   - component: {fileID: 6458374141616116223}
+  - component: {fileID: 8386404147336849254}
   m_Layer: 8
   m_Name: Piston (4)
   m_TagString: Untagged
@@ -18073,6 +18608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78a4711557e6ece4ea0929ebe9d203c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _carPartType: {fileID: 8386404147336849254}
   _nextParts: []
   _previousParts:
   - {fileID: 2207887911875978088}
@@ -18085,6 +18621,20 @@ MonoBehaviour:
   - {fileID: 8005135653559466913}
   _compositePartElementsConsumables:
   - {fileID: 7462815129898465822}
+--- !u!114 &8386404147336849254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6851470126526117283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f00e6e6198b48e4ba2a2261e27a43b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carSystem: 1
+  _enginePartType: 4
 --- !u!1 &6931174302949366900
 GameObject:
   m_ObjectHideFlags: 0
@@ -18789,7 +19339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 849088a59f25fbb4a99e3b70d9a7672d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mainPickableItemMonoBehaviour: {fileID: 0}
+  _mainPickableItemMonoBehaviour: {fileID: 163541870855202599}
 --- !u!114 &8274263971616683956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19233,7 +19783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 849088a59f25fbb4a99e3b70d9a7672d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mainPickableItemMonoBehaviour: {fileID: 0}
+  _mainPickableItemMonoBehaviour: {fileID: 163541870855202599}
 --- !u!114 &1116075585244877542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19758,7 +20308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 849088a59f25fbb4a99e3b70d9a7672d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mainPickableItemMonoBehaviour: {fileID: 0}
+  _mainPickableItemMonoBehaviour: {fileID: 163541870855202599}
 --- !u!114 &2711347241954615407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20031,7 +20581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 849088a59f25fbb4a99e3b70d9a7672d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mainPickableItemMonoBehaviour: {fileID: 0}
+  _mainPickableItemMonoBehaviour: {fileID: 163541870855202599}
 --- !u!114 &8093575286963507661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20160,6 +20710,7 @@ GameObject:
   - component: {fileID: 8277440231313178035}
   - component: {fileID: 3142923796534738123}
   - component: {fileID: 6988173889018378442}
+  - component: {fileID: 7453025985226133411}
   m_Layer: 8
   m_Name: OilPump
   m_TagString: Untagged
@@ -20795,12 +21346,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc547b57669f28a4d85d0490b7209eba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _carPartType: {fileID: 7453025985226133411}
   _nextParts: []
   _previousParts:
   - {fileID: 2207887911875978088}
   _fenixPartObject: {fileID: 8298352700362988936}
   _bolts: []
   _redPart: {fileID: 3618667889418197598}
+--- !u!114 &7453025985226133411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8298352700362988936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f00e6e6198b48e4ba2a2261e27a43b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carSystem: 1
+  _enginePartType: 5
 --- !u!1 &8299751359130051709
 GameObject:
   m_ObjectHideFlags: 0
@@ -20866,6 +21432,92 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 3e1ed765b63df3548af52c61ffad5148, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &8305031174143078255
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3617263177545185732}
+  - component: {fileID: 2033840486044475226}
+  - component: {fileID: 6785093905581759661}
+  m_Layer: 8
+  m_Name: OilFilterRed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &3617263177545185732
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8305031174143078255}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3319189041293575655}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &2033840486044475226
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8305031174143078255}
+  m_Mesh: {fileID: 8650127009266895142, guid: ecfb69dba61cb1b45a89bc07b554102b, type: 3}
+--- !u!23 &6785093905581759661
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8305031174143078255}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 69ff0bf5232992f4ea0026ec0d7498e4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21341,7 +21993,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 849088a59f25fbb4a99e3b70d9a7672d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mainPickableItemMonoBehaviour: {fileID: 0}
+  _mainPickableItemMonoBehaviour: {fileID: 163541870855202599}
 --- !u!114 &7309503345145082778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21519,6 +22171,94 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 3e1ed765b63df3548af52c61ffad5148, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &9039159753337821509
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3319189041293575655}
+  - component: {fileID: 1581823562871986348}
+  - component: {fileID: 7343725978493896185}
+  m_Layer: 8
+  m_Name: OilFilterMesh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3319189041293575655
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9039159753337821509}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.01, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3617263177545185732}
+  - {fileID: 3532591359465064310}
+  m_Father: {fileID: 7319889669846637368}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1581823562871986348
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9039159753337821509}
+  m_Mesh: {fileID: 8650127009266895142, guid: ecfb69dba61cb1b45a89bc07b554102b, type: 3}
+--- !u!23 &7343725978493896185
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9039159753337821509}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 9a70f47904168c34b8ed0fb21c1567c4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

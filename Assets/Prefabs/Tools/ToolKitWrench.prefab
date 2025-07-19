@@ -451,9 +451,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _toolType: 1
-  _wrenchPlayer: {fileID: 4154132756969794934}
-  _wrenchPlayerParent: {fileID: 1622218133761962003}
-  _wrenchRenderer: {fileID: 8002264204063532802}
+  _playerTool: {fileID: 4154132756969794934}
+  _playerToolParent: {fileID: 1622218133761962003}
+  _toolKitToolRenderer: {fileID: 8002264204063532802}
 --- !u!1 &6139853013499149188
 GameObject:
   m_ObjectHideFlags: 0
