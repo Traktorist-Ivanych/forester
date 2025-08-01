@@ -4,21 +4,20 @@ namespace Fenix
 {
     public class PickableCarPartComposite : PickableCarPart
     {
-        [SerializeField] private PickableCarPartCompositeElement[] _pickableCompositeElements;
         [SerializeField] private CarPartCompositeElement[] _compositeElements;
 
         public bool CanElementBeInstalled(int elementIndex)
         {
-            if (elementIndex >= _pickableCompositeElements.Length) return false;
+            if (elementIndex >= _compositeElements.Length) return false;
 
-            return _pickableCompositeElements[elementIndex] == null;
+            return !_compositeElements[elementIndex].IsInstalled;
         }
 
         public override void Install()
         {
-            base.Install();
-
             (_nearestFenixPart as FenixPartComposite).InstallCompositeElements(_compositeElements);
+
+            base.Install();
         }
 
         public void SetupElements(FenixPartCompositeElement[] compositePartElements)
@@ -31,7 +30,6 @@ namespace Fenix
 
         public virtual void InstallCompositeElement(PickableCarPartCompositeElement compositeElement, int elementIndex)
         {
-            _pickableCompositeElements[elementIndex] = compositeElement;
             _compositeElements[elementIndex].Install(compositeElement);
 
             _compositeElements[elementIndex].DismantleAction += OnCompositeElementDismantle;
@@ -40,7 +38,6 @@ namespace Fenix
         protected virtual void OnCompositeElementDismantle(CarPartCompositeElement compositeElement)
         {
             compositeElement.DismantleAction -= OnCompositeElementDismantle;
-            _pickableCompositeElements[System.Array.IndexOf(_compositeElements, compositeElement)] = null;
         }
     }
 }

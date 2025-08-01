@@ -4,7 +4,7 @@ namespace Fenix
 {
     public abstract class CarPartType : MonoBehaviour
     {
-        [SerializeField] private CarSystem carSystem;
+        [SerializeField] protected CarSystem carSystem;
 
         public CarSystem CarSystem => carSystem;
     }

@@ -17,14 +17,14 @@ namespace Items
         public IPickableItem OriginalIPickableItem => this;
         public Transform ItemTransform => transform;
 
-        private void OnValidate()
+        protected virtual void OnValidate()
         {
             if (_rigidbody == null && TryGetComponent(out Rigidbody rigidbody))
             {
                 _rigidbody = rigidbody;
             }
 
-            if (_colliders.Count <= 0)
+            if (_colliders == null || _colliders.Count <= 0)
             {
                 _colliders = GetComponentsInChildren<Collider>().ToList();
 

@@ -3,32 +3,7 @@ guid: ecfb69dba61cb1b45a89bc07b554102b
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: BeltClean
-    second: {fileID: 2100000, guid: 77cdb4f78635c4145b8af65e172e27df, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Blue
-    second: {fileID: 2100000, guid: c97f3253b476f4b45a9308fd3247d5bd, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: ConsumablesClean
-    second: {fileID: 2100000, guid: 9a70f47904168c34b8ed0fb21c1567c4, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: FenixPartsAtlas
-    second: {fileID: 2100000, guid: 3e1ed765b63df3548af52c61ffad5148, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: White
-    second: {fileID: 2100000, guid: 20860e4213666af469db7d169427a345, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

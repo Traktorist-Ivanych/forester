@@ -7,5 +7,10 @@ namespace Fenix
         [SerializeField] private ConsumablesPartType _consumablesPartType;
 
         public ConsumablesPartType ConsumablesPartType => _consumablesPartType;
+
+        private void OnValidate()
+        {
+            carSystem = CarSystem.Consumables;
+        }
     }
 }

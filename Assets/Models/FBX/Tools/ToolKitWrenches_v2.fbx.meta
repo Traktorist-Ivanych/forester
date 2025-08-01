@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 426eadeeb16596a4c8985c1883f2bb45
+guid: fe8b579b9cb1e0846b9953771b17118a
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Glass
-    second: {fileID: 2100000, guid: da28dded4b52af74b80fa196570fee89, type: 2}
+      name: ToolsAtlas
+    second: {fileID: 2100000, guid: ea3b3f8c8e842d54e931521009e4cace, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

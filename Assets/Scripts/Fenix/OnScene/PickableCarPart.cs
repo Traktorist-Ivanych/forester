@@ -45,6 +45,16 @@ namespace Fenix
             }
         }
 
+        protected override void OnValidate()
+        {
+            base.OnValidate();
+
+            if (_carPartType == null)
+            {
+                TryGetComponent(out _carPartType);
+            }
+        }
+
         public void Initialize(List<FenixPart> fenixParts)
         {
             _fenixParts = fenixParts;

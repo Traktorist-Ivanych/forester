@@ -8,9 +8,9 @@ namespace Fenix
 
         public override void Install()
         {
-            base.Install();
-
             (_nearestFenixPart as FenixPartWithConsumables).InstallConsumables(_consumables);
+
+            base.Install();
         }
 
         public void SetupConsumables(CarPartConsumables carPartConsumables)

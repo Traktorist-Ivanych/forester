@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using Interfaces;
 using UnityEngine;
+using Zenject;
 
 namespace Fenix
 {
     public class FenixPart : MonoBehaviour, IRightMouseClickable
     {
+        [Inject] protected readonly PickableCarPartsContainer _pickableCarPartsContainer;
+
         [SerializeField] private CarPartType _carPartType;
 
         [SerializeField] private List<FenixPart> _nextParts;
@@ -22,6 +25,14 @@ namespace Fenix
 
         public CarPartType CarPartType => _carPartType;
         public bool IsInstalled => _isInstalled;
+
+        private void OnValidate()
+        {
+            if (_carPartType == null)
+            {
+                TryGetComponent(out _carPartType);
+            }
+        }
 
         public bool CanBeInstalled()
         {
@@ -44,7 +55,6 @@ namespace Fenix
 
         public void Install(IPickableItemCarPart pickableItemCarPart)
         {
-            _pickableItemCarPart = pickableItemCarPart;
             _fenixPartObject.SetActive(true);
 
             foreach (Bolt bolt in _bolts)
@@ -92,6 +102,7 @@ namespace Fenix
 
             _fenixPartObject.SetActive(false);
 
+            _pickableItemCarPart = _pickableCarPartsContainer.GetPickableCarPart(_carPartType);
             _pickableItemCarPart.Dismantle(transform);
         }
 

@@ -20,10 +20,10 @@ namespace Fenix
 
         public override void OnRightMouseClicked()
         {
+            base.OnRightMouseClicked();
+
             (_pickableCompositeElement as PickableCarPartCompositeElementConsumables).CarPartConsumables
                 .SetHealthPoints(_carPartConsumables.HealthPoints);
-
-            base.OnRightMouseClicked();
         }
     }
 }

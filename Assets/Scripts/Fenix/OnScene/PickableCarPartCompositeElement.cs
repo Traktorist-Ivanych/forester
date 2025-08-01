@@ -8,16 +8,13 @@ namespace Fenix
     public class PickableCarPartCompositeElement : PickableItem, IPickableItemCarPart
     {
         [SerializeField] private CarPartType _carPartType;
-        [SerializeField] private CarPartType _parentCarPartType;
 
-        private List<PickableCarPartComposite> _compositeParts;
-        [SerializeField] private int _elementIndex;
+        private List<CarPartCompositeElement> _compositeParts;
 
         private bool _canBeInstalled;
-        private PickableCarPartComposite _nearestCompositePart;
+        private CarPartCompositeElement _nearestCompositePart;
 
         public CarPartType CarPartType => _carPartType;
-        public CarPartType ParentCarPartType => _parentCarPartType;
         public bool CanBeInstalled => _canBeInstalled;
 
         private void Update()
@@ -28,9 +25,9 @@ namespace Fenix
                 _canBeInstalled = false;
                 _nearestCompositePart = null;
 
-                foreach (PickableCarPartComposite compositePart in _compositeParts)
+                foreach (CarPartCompositeElement compositePart in _compositeParts)
                 {
-                    if (!compositePart.CanElementBeInstalled(_elementIndex)) continue;
+                    if (compositePart.IsInstalled) continue;
 
                     float distance = Vector3.Distance(transform.position, compositePart.transform.position);
 
@@ -47,19 +44,14 @@ namespace Fenix
             }
         }
 
-        public void Initialize(List<PickableCarPart> compositeParts)
+        public void Initialize(List<CarPartCompositeElement> compositeParts)
         {
-            _compositeParts = new List<PickableCarPartComposite>();
-
-            foreach (PickableCarPart pickableCarPart in compositeParts)
-            {
-                _compositeParts.Add(pickableCarPart as PickableCarPartComposite);
-            }
+            _compositeParts = compositeParts;
         }
 
         public void Install()
         {
-            _nearestCompositePart.InstallCompositeElement(this, _elementIndex);
+            _nearestCompositePart.Install(this);
 
             Release();
 

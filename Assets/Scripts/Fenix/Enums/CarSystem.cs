@@ -15,13 +15,35 @@ namespace Fenix
         MainBearingCap,
         Piston,
         OilPump,
-        OilPan
+        OilPan,
+        Generator,
+        Starter,
+        CamshaftPulley,
+        EngineFan,
+        WaterPumpPulley,
+        WaterPump,
+        FuelPump,
+        WaterPumpBody,
+        CranckShaftGear,
+        CamshaftGear,
+        Camshaft,
+        CylindersHead,
+        CylindersHeadCoverLeft,
+        CylindersHeadCoverRight,
+        Rokers,
+        Pushrod,
+        Valve,
+        ExhaustManifoldLeft,
+        ExhaustManifoldRight,
     }
 
     public enum ConsumablesPartType
     {
         None,
         OilFilter,
-        PistonRings
+        PistonRings,
+        WaterPumpGasket,
+        CylindersHeadGasket,
+        SparkPlug
     }
 }

@@ -7,5 +7,10 @@ namespace Fenix
         [SerializeField] private EnginePartType _enginePartType;
 
         public EnginePartType EnginePartType => _enginePartType;
+
+        private void OnValidate()
+        {
+            carSystem = CarSystem.Engine;
+        }
     }
 }
